@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profit Magnet AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    header {
+      background: #121212;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ffb3;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .btn {
+      background: #00ffb3;
+      color: #000;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00ffb3;
+    }
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .reviews img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #00ffb3;
+    }
+    .pricing, .contact {
+      text-align: center;
+    }
+    .contact-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #25d366;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    footer {
+      background: #1c1c1c;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    footer a {
+      color: #00ffb3;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://wa.me/2349157286254" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>  <header class="scroll-section">
+    <h1>Profit Magnet AI</h1>
+    <p>Trade Smarter. Earn Faster. 100% Automated Trading.</p>
+    <a href="#pricing"><button class="btn">Get Started</button></a>
+  </header>  <section class="scroll-section">
+    <h2 class="section-title">About Profit Magnet AI</h2>
+    <p>
+      Profit Magnet AI is a fully automated trading system that helps users earn passive income effortlessly. With AI-driven strategies, you can trade without any experience and make profit around the clock.
+    </p>
+  </section>  <section class="scroll-section">
+    <h2 class="section-title">Client Reviews</h2>
+    <div class="reviews">
+      <img src="img1.jpg" alt="Review 1">
+      <img src="img2.jpg" alt="Review 2">
+      <img src="img3.jpg" alt="Review 3">
+      <img src="img4.jpg" alt="Review 4">
+      <img src="img5.jpg" alt="Review 5">
+      <img src="img6.jpg" alt="Review 6">
+    </div>
+  </section>  <section class="pricing scroll-section" id="pricing">
+    <h2 class="section-title">Get Started</h2>
+    <p>Our AI is ready to trade for you. Payment integration coming soon.</p>
+    <a class="contact-link" href="https://wa.me/2349157286254" target="_blank">Click to contact us on WhatsApp</a>
+  </section> 
+   <footer class="scroll-section">
+  <p>Connect with us:</p>
+  <a href="https://wa.me/2349157286254" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.instagram.com/profitsmagnetai?igsh=YzljYTk1ODg3Zg=" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://t.me/ProfitsMagnetAI" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+  <a href="https://youtube.com/@profitsmagnetai?si=ibFWYKx_yzmSx8Xb" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+  <p style="margin-top:1rem; font-size: 0.9rem; color:#aaa">&copy; 2025 Profit Magnet AI. All rights reserved.</p>
+</footer>  
+<script>
+    const sections = document.querySelectorAll('.scroll-section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script></body>
+</html>
